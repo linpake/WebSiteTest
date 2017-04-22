@@ -1,10 +1,26 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="bookApp">
 <head>
     <script src="js/lib/angular.min.js"></script>
+    <script src="js/modules/bookModule.js"></script>
     <title></title>
 </head>
 <body>
-
+    <table ng-controller="bookController">
+        <thead>
+            <tr>
+                <td>Book name</td>
+                <td>Book author</td>
+                <td>Book price</td>
+            </tr>
+        </thead>
+        <tbody ng-repeat="book in books">
+            <tr>
+                <td>{{book.name}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.price}}</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
