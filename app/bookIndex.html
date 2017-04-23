@@ -3,6 +3,7 @@
 <head>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/modules/bookModule.js"></script>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -18,7 +19,7 @@
             <tr>
                 <td>{{book.name}}</td>
                 <td>{{book.author}}</td>
-                <td>{{book.price}}</td>
+                <td>{{book.price | number: 2}}</td>
             </tr>
         </tbody>
     </table>
